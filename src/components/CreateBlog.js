@@ -44,7 +44,7 @@ export default function CreateBlog({setData}) {
           Blog already exists!
         </Alert>
       </Snackbar>
-      <Snackbar open={openSuccess} autoHideDuration={1000} onClose={() => setOpenSuccess(false)} anchorOrigin={{ vertical: 'top', horizontal:'center' }}>
+      <Snackbar open={openSuccess} autoHideDuration={2000} onClose={() => setOpenSuccess(false)} anchorOrigin={{ vertical: 'top', horizontal:'center' }}>
         <Alert severity="success" sx={{ width: '100%' }}>
           Success Posting!
         </Alert>
