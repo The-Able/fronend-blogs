@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default function Home(){
   const [data, setData] = useState();
-  
+
   const getData = () => {
     axios.get(`https://backend-api-blogs.herokuapp.com/api`)
     // axios.get(`${process.env.API_URL}:${process.env.API_URL}/api`)
@@ -22,7 +22,7 @@ export default function Home(){
 
   return (
       <div >
-        {data && <BlogTable rows = {data} setData = {setData} />}
+        {data && <BlogTable rows = {data} />}
       </div>
   );
 }

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, Box, Grid, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function BlogTable({rows, setData}) {
+export default function BlogTable({rows}) {
   const navigate = useNavigate();
 
   return (

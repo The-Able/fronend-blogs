@@ -6,9 +6,8 @@ import {useFormik} from 'formik';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-export default function CreateBlog({setData}) {
+export default function CreateBlog({}) {
   const [openWarn, setOpenWarn] = React.useState(false);
-  const [openSuccess, setOpenSuccess] = React.useState(false);
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -30,7 +29,6 @@ export default function CreateBlog({setData}) {
             setOpenWarn(true);
             return;
         }
-        setOpenSuccess(true);
         navigate('/');
     },
   });
@@ -42,11 +40,6 @@ export default function CreateBlog({setData}) {
       <Snackbar open={openWarn} autoHideDuration={2000} onClose={() => setOpenWarn(false)} anchorOrigin={{ vertical: 'top', horizontal:'center' }}>
         <Alert severity="warning" sx={{ width: '100%' }}>
           Blog already exists!
-        </Alert>
-      </Snackbar>
-      <Snackbar open={openSuccess} autoHideDuration={2000} onClose={() => setOpenSuccess(false)} anchorOrigin={{ vertical: 'top', horizontal:'center' }}>
-        <Alert severity="success" sx={{ width: '100%' }}>
-          Success Posting!
         </Alert>
       </Snackbar>
       <Grid container>
