@@ -21,7 +21,7 @@ export default function BlogDetail(){
 
     // Get all datas of one blog
     const getData = () => {
-        axios.get(`https://backend-api-blogs.herokuapp.com/api/` + id)
+        axios.get(`${process.env.REACT_APP_API_URL}/` + id)
             .then(res => {
                 if(res.data){                    
                     changedData(res.data.comment);
@@ -42,7 +42,7 @@ export default function BlogDetail(){
         onSubmit: async (values) => {
             const res = await axios({
                 method: 'post',
-                url: `https://backend-api-blogs.herokuapp.com/api/` + id + '/create/comment',
+                url: `${process.env.REACT_APP_API_URL}/` + id + '/create/comment',
                 data: {
                     comment: values.comment
                 }

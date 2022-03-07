@@ -11,19 +11,16 @@ export default function BlogTable({rows}) {
   return (
     <Box sx={{ flexGrow: 1, padding: 10 }}>
       <Grid container columns={{xs:4, md:12}} spacing={2}>
-        {/* -------------Header------------- */}
         <Grid item xs={10}>
           <Typography variant="h3" gutterBottom component="div">
             BlogS
           </Typography>
         </Grid>
         <Grid item xs={2}>
-          {/* <CreateBlog setData = {setData} /> */}
           <Button sx={{marginTop: '20px'}} variant="outlined" onClick = {() => navigate("/editor")}>
             Post a Blog
           </Button>
         </Grid>
-        {/* -----------------/Header---------------- */}
         {rows?.map((row) => (         
           <Grid item xs={4} key={row._id} >
             <Link to={`/${row._id}`} style={{ textDecoration: 'none' }}  >

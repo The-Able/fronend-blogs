@@ -19,7 +19,7 @@ export default function CreateBlog({}) {
       //${process.env.API_URL}:${process.env.port}/api
         const res = await axios({
             method: 'post',
-            url: `https://backend-api-blogs.herokuapp.com/api/create/blog`,
+            url: `${process.env.REACT_APP_API_URL}/create/blog`,
             data: {
                 title: values.title,
                 content: values.content
