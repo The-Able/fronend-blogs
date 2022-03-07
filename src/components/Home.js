@@ -6,7 +6,7 @@ export default function Home(){
   const [data, setData] = useState();
   
   const getData = () => {
-    axios.get(`http://localhost:${process.env.REACT_APP_PORT}/api`)
+    axios.get(`https://backend-api-blogs.herokuapp.com/api`)
     // axios.get(`${process.env.API_URL}:${process.env.API_URL}/api`)
     .then(res => {
       if(res.data){
