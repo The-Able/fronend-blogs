@@ -18,7 +18,6 @@ export default function BlogTable({rows}) {
           </Typography>
         </Grid>
         <Grid item xs={2}>
-          {/* <CreateBlog setData = {setData} /> */}
           <Button sx={{marginTop: '20px'}} variant="outlined" onClick = {() => navigate("/editor")}>
             Post a Blog
           </Button>
