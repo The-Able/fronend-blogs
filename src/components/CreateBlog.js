@@ -27,8 +27,10 @@ export default function CreateBlog({setData}) {
             }
         });
         if(res.data.error){
+            setOpenWarn(true);
             return;
         }
+        setOpenSuccess(true);
         navigate('/');
     },
   });
