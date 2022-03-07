@@ -13,7 +13,7 @@ export default function BlogDetail(){
 
     // Change the date format
     const changedData = ( arrayData ) => {
-        arrayData.map((row) => {
+        arrayData?.map((row) => {
             var d = new Date(row.date);
             row.date = d.toLocaleDateString() + ' ' + d.toLocaleTimeString();
         });
